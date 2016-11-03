@@ -1,0 +1,35 @@
+size 640 480
+color red 1 0 0
+color green 0 1 0
+color blue .2 .2 .8
+color white 1 1 1
+color cyan 0 1 1
+color magenta 1 0 1
+color black 0 0 0
+color gray .5 .5 .5
+phong_shader s white black black 50
+sphere - -1.5 -1.5 0 .5 s
+phong_shader s black white black 50
+sphere - 0 -1.5 0 .5 s
+phong_shader s black black white 50
+sphere - 1.5 -1.5 0 .5 s
+phong_shader s cyan black black 50
+sphere - -1.5 0 0 .5 s
+phong_shader s black cyan black 50
+sphere - 0 0 0 .5 s
+phong_shader s black black cyan 50
+sphere - 1.5 0 0 .5 s
+phong_shader s black black white 20
+sphere - -1.5 1.5 0 .5 s
+phong_shader s black black white 5
+sphere - 0 1.5 0 .5 s
+phong_shader s black black white 200
+sphere - 1.5 1.5 0 .5 s
+ambient_light magenta .2
+point_light 0 4 6 white 200
+point_light -3 1 6 magenta 200
+enable_shadows 0
+recursion_depth_limit 1
+flat_shader b gray
+background b
+camera 0 0 6 0 0 0 0 1 0 70
