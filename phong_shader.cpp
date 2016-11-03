@@ -49,13 +49,11 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
 
         neue_color += color_mix(emitted_light, color_diffuse) * double_max(0, dot(n, l));
         neue_color += color_mix(emitted_light, color_specular) * pow(dot(h, n), specular_power * 4.0);
-        neue_color += color_mix(emitted_light, color_ambient) * 0.0;
         neue_color *= 1 / dis_light_to_hitpoint_2;
-        //printf("%f--%f\n",dot(h,n),pow(dot(h,n),specular_power));
         color += neue_color;
 
 
     }
-
+    color += color_mix(world.ambient_color, color_ambient) * world.ambient_intensity;
     return color;
 }
