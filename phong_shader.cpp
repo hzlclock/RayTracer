@@ -35,25 +35,39 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
     vec3 e = ray.direction;
     vec3 h;
 
-    double cr = 0.10;
+    double cr = 1;
+    double dis_light_intersection;
 
     for (auto &einLight: world.lights) {
-        vec3 neue_color;
         l = (einLight->position - intersection_point).normalized();
+        double dis_light_to_hitpoint_2 = (einLight->position - intersection_point).magnitude_squared();
+        if (world.enable_shadows) {
+            Ray intersection_to_light(intersection_point + l * 0.1, -l);
+            Hit hit;
+            Object *obstacle = world.Closest_Intersection(intersection_to_light, hit);
+            if (obstacle != nullptr && hit.t < sqrt(dis_light_to_hitpoint_2)) {
+                //TODO: reflection
+                continue;
+            }
+        }
+
+        vec3 neue_color;
+
         h = (e + l).normalized();
         double cos_diff = fabs(dot(l, reflected_ray));
         vec3 emitted_light = einLight->Emitted_Light(ray);
 
-        double dis_light_to_hitpoint_2 = (einLight->position - intersection_point).magnitude_squared();
+
 
 
         neue_color += color_mix(emitted_light, color_diffuse) * double_max(0, dot(n, l));
-        neue_color += color_mix(emitted_light, color_specular) * pow(dot(h, n), specular_power * 4.0);
+        neue_color += color_mix(emitted_light, color_specular) * pow(dot(h, n), specular_power * 4);
         neue_color *= 1 / dis_light_to_hitpoint_2;
         color += neue_color;
 
 
     }
     color += color_mix(world.ambient_color, color_ambient) * world.ambient_intensity;
+    //color += vec3(0.5,0,0);
     return color;
 }

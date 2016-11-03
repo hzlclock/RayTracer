@@ -11,6 +11,7 @@ inline double dis_point_to_line(const vec3 &x0,
 
 bool Sphere::Intersection(const Ray &ray, std::vector<Hit> &hits) const {
     // TODO
+    if (dot(ray.direction, (ray.endpoint - center)) < 0)return false;
     float dis = dis_point_to_line(center, ray.endpoint, ray.endpoint + ray.direction);
     //printf("%f|", dis);
     if (dis < radius) {
