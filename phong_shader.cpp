@@ -32,11 +32,7 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
 
     vec3 l;
     vec3 n = same_side_normal.normalized();
-    vec3 e = ray.direction;
-    vec3 h;
-
-    double cr = 1;
-    double dis_light_intersection;
+    vec3 e = ray.direction.normalized();
 
     for (auto &einLight: world.lights) {
         l = (einLight->position - intersection_point).normalized();
@@ -53,15 +49,13 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
 
         vec3 neue_color;
 
-        h = (e + l).normalized();
         double cos_diff = fabs(dot(l, reflected_ray));
         vec3 emitted_light = einLight->Emitted_Light(ray);
 
-
-
-
         neue_color += color_mix(emitted_light, color_diffuse) * double_max(0, dot(n, l));
-        neue_color += color_mix(emitted_light, color_specular) * pow(dot(h, n), specular_power * 4);
+        vec3 reflected_light = reflect(l, n);
+        neue_color +=
+                color_mix(emitted_light, color_specular) * pow(double_max(0, -dot(e, reflected_light)), specular_power);
         neue_color *= 1 / dis_light_to_hitpoint_2;
         color += neue_color;
 
