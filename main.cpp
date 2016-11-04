@@ -16,6 +16,7 @@
 #include "driver.h"
 #include "film.h"
 #include <iostream>
+#include <sstream>
 
 //--------------------------------------------------------------------------------
 int width = 640;
@@ -68,7 +69,7 @@ void Dump_png(Pixel *data, int width, int height, const char *filename);
 
 void Read_png(Pixel *&data, int &width, int &height, const char *filename);
 
-int main(int argc, char **argv) {
+int _main(int argc, char **argv) {
     bool dump_png = false, compute_diff = false;
     char *solution_filename = 0;
     char *mask_filename = 0;
@@ -129,5 +130,13 @@ int main(int argc, char **argv) {
     }
 
     return 0;
+}
+
+#define AHORA "08"
+
+int main() {
+    int argc = 5;
+    char *argv[5] = {"", "-d", "14.txt", "render-14.png", "mask-all.png"};
+    return _main(argc, argv);
 }
 

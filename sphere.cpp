@@ -11,19 +11,26 @@ inline double dis_point_to_line(const vec3 &x0,
 
 bool Sphere::Intersection(const Ray &ray, std::vector<Hit> &hits) const {
     // TODO
-    if (dot(ray.direction, (ray.endpoint - center)) < 0)return false;
-    float dis = dis_point_to_line(center, ray.endpoint, ray.endpoint + ray.direction);
+    bool isInside = ((ray.endpoint - center).magnitude() < radius);
+    if (dot(ray.direction, (ray.endpoint - center)) < 0 && !isInside) {
+        return false;
+    }
+    double dis = dis_point_to_line(center, ray.endpoint, ray.endpoint + ray.direction);
     //printf("%f|", dis);
     if (dis < radius) {
         Hit newhit;
         newhit.object = this;
-        newhit.part = ((ray.endpoint - center).magnitude() < radius);
-        newhit.t = sqrt((ray.endpoint - center).magnitude_squared() - dis * dis) -
-                   sqrt(radius * radius - dis * dis);
+        newhit.part = 0;
+        newhit.t = sqrt((ray.endpoint - center).magnitude_squared() - dis * dis);
+        newhit.t += sqrt(radius * radius - dis * dis);
         newhit.ray_exiting = false;
-
-        //printf("%f\n",(ray.endpoint - ray.direction*newhit.t - center).magnitude() - radius);
-
+        hits.push_back(newhit);
+        if (!isInside) {
+            newhit.part = 1;
+            newhit.ray_exiting = true;
+            newhit.t -= 2 * sqrt(radius * radius - dis * dis);
+            hits.push_back(newhit);
+        }
         hits.push_back(newhit);
         return true;
     }
@@ -35,6 +42,6 @@ vec3 Sphere::Normal(const vec3 &point, int part) const {
     // TODO: set the normal
     normal = point - center;
     normal = normal.normalized();
-    if (part == 1)normal = -normal;
+    if (part == 0)normal = -normal;
     return normal;
 }

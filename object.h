@@ -16,6 +16,7 @@ class Shader;
 
 class Object {
 public:
+
     Shader *material_shader;
 
     Object() : material_shader(0) {}
@@ -37,6 +38,13 @@ public:
     // routine should never be called for intersections recorded at time 0,
     // since these hits indicate that the ray started inside the object, not
     // that it actually intersects its surface.
+
+    /**
+     *
+     * @param point the intersection point
+     * @param part part/2*2 + (part%2+1)%2 is the other side of the surface
+     * @return the normal vector of the surface
+     */
     virtual vec3 Normal(const vec3 &point, int part) const =0;
 };
 
