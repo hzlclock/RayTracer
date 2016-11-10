@@ -17,6 +17,8 @@ public:
     virtual bool Intersection(const Ray &ray, std::vector<Hit> &hits) const override;
 
     virtual vec3 Normal(const vec3 &point, int part) const override;
+
+    virtual bool isInside(const vec3 &point) override;
 };
 
 #endif

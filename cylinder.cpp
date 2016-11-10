@@ -14,3 +14,7 @@ vec3 Cylinder::Normal(const vec3 &point, int part) const {
     // TODO: set the normal
     return normal;
 }
+
+bool Cylinder::isInside(const vec3 &point) {
+    return false;
+}

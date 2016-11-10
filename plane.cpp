@@ -18,7 +18,7 @@ Intersection(const Ray &ray, std::vector<Hit> &hits) const {
         newhit.t = dis_ray_to_plane;
         if (newhit.t < 0) newhit.t = -newhit.t;
         //std::cout<<ray.endpoint - ray.direction*newhit.t<<std::endl;
-        newhit.ray_exiting = false;
+        newhit.ray_exiting = (ray_normal > 0);
         hits.push_back(newhit);
         return true;
     }
@@ -29,4 +29,9 @@ vec3 Plane::
 Normal(const vec3 &point, int part) const {
     if (part == 0) return -normal;
     return normal;
+}
+
+bool Plane::isInside(const vec3 &point) {
+    bool result = (bool) (dot(point - x1, normal) < 0);
+    return result;
 }

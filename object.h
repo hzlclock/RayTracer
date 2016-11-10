@@ -46,6 +46,8 @@ public:
      * @return the normal vector of the surface
      */
     virtual vec3 Normal(const vec3 &point, int part) const =0;
+
+    virtual bool isInside(const vec3 &point) =0;
 };
 
 #endif

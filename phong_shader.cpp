@@ -38,11 +38,12 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
         l = (einLight->position - intersection_point).normalized();
         double dis_light_to_hitpoint_2 = (einLight->position - intersection_point).magnitude_squared();
         if (world.enable_shadows) {
-            Ray intersection_to_light(intersection_point + l * 0.1, -l);
+            Ray intersection_to_light(intersection_point - l * 0.0001, -l);
             Hit hit;
             Object *obstacle = world.Closest_Intersection(intersection_to_light, hit);
-            if (obstacle != nullptr && hit.t < sqrt(dis_light_to_hitpoint_2)) {
+            if (obstacle != nullptr && hit.t > 0.001 && hit.t < sqrt(dis_light_to_hitpoint_2)) {
                 //TODO: reflection
+                // += vec3(0,0.5,0);
                 continue;
             }
         }

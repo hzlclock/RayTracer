@@ -31,7 +31,6 @@ bool Sphere::Intersection(const Ray &ray, std::vector<Hit> &hits) const {
             newhit.t -= 2 * sqrt(radius * radius - dis * dis);
             hits.push_back(newhit);
         }
-        hits.push_back(newhit);
         return true;
     }
     return false;
@@ -42,6 +41,12 @@ vec3 Sphere::Normal(const vec3 &point, int part) const {
     // TODO: set the normal
     normal = point - center;
     normal = normal.normalized();
-    if (part == 0)normal = -normal;
+    if (part == 0)
+        normal = -normal;
     return normal;
+}
+
+bool Sphere::isInside(const vec3 &point) {
+    if ((point - center).magnitude() < radius) return true;
+    return false;
 }
