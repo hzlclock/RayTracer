@@ -131,11 +131,10 @@ int _main(int argc, char **argv) {
 
     return 0;
 }
-#define AHORA "08"
 
 int main() {
     int argc = 5;
-    char *argv[5] = {"", "-d", "test.txt", "render-18.png", "mask-all.png"};
+    char *argv[5] = {"", "-d", "10.txt", "render-10.png", "mask-all.png"};
     return _main(argc, argv);
 }
 

@@ -29,7 +29,7 @@ bool Sphere::Intersection(const Ray &ray, std::vector<Hit> &hits) const {
             newhit.part = 1;
             newhit.ray_exiting = true;
             newhit.t -= 2 * sqrt(radius * radius - dis * dis);
-            hits.push_back(newhit);
+            if (newhit.t > 0) hits.push_back(newhit);
         }
         return true;
     }

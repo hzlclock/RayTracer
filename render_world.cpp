@@ -72,7 +72,8 @@ vec3 Render_World::Cast_Ray(Ray &ray, int recursion_depth) {
 
     // Then, do shading!
     if (closest_object) {
-        vec3 hitpoint = ray.endpoint - hit.t * ray.direction.normalized();
+        vec3 hitpoint = ray.endpoint - hit.t * ray.direction;
+        closest_object->material_shader->dueno = closest_object;
         color = closest_object->
                 material_shader->
                 Shade_Surface(ray, hitpoint,

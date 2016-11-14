@@ -11,6 +11,7 @@ class Object;
 
 class Shader {
 public:
+    Object *dueno;
     Render_World &world;
 
     Shader(Render_World &world_input)
