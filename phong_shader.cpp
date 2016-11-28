@@ -28,6 +28,7 @@ inline void trim_color(vec3 &color) {
 vec3 Phong_Shader::
 Shade_Surface(const Ray &ray, const vec3 &intersection_point,
               const vec3 &same_side_normal, int recursion_depth) const {
+
     vec3 color(0, 0, 0);
     // TODO: determine the color
     vec3 reflected_ray = reflect(ray.direction, same_side_normal);
@@ -52,7 +53,7 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
                     for (auto &&hit2 : hits) {
                         if (hit2.t < dis_light_to_hitpoint) {
                             esSombra = true;
-                            color += vec3(0, 0.2, 0);
+
                             goto sombra_exit;
                         }
                     }
@@ -73,9 +74,14 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
             neue_color *= 1 / dis_light_to_hitpoint_2;
             color += neue_color;
         } else {
-
+            //printf("¡SOMBRA!");
         }
+        //if(color.x[0] == 0) {
+        //    printf("*");
+        //    goto sombra_exit;
+        //}
     }
+
 
     color += color_mix(world.ambient_color, color_ambient) * world.ambient_intensity;
     //color += vec3(0.5,0,0);

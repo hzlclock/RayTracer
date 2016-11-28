@@ -1,0 +1,18 @@
+size 1024 600
+color red 1 0 0
+color green 0 1 0
+color blue .2 .2 .8
+color white 1 1 1
+color gray .5 .5 .5
+phong_shader white_shader white white white 40
+phong_shader gray_shader gray gray white 50
+flat_shader flat_shader white
+sp_texture_shader earthshader white_shader earth.png
+sp_texture_shader moonshader white_shader moon.png
+sphere - 0 0 0 2 earthshader
+sphere - 3 5 1 1 moonshader
+point_light 6 -7 5 white 1400
+point_light 0 3 2 white 100
+enable_shadows 0
+recursion_depth_limit 1
+camera 2 -7 2 0 0 0 -.3 1 0 70

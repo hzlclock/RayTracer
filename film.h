@@ -31,11 +31,14 @@ public:
 
     void Set_Resolution(const int pixels_width, const int pixels_height);
 
+    void Set_Resolution_pourAA(const int pixels_width, const int pixels_height);
     void Set_Pixel(const ivec2 &pixel_index, const Pixel &color) {
         int i = pixel_index[0];
         int j = pixel_index[1];
         colors[j * pixel_grid.size[0] + i] = color;
     }
+
+    void FinishAA();
 
 };
 

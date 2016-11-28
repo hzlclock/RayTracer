@@ -123,6 +123,7 @@ int _main(int argc, char **argv) {
         Dump_png(data_mask, width, height, "weighted-diff.png");
     } else if (dump_png) {
         while (!driver.Render_More()) {}
+        if (world.antialias) world.camera.film.FinishAA();
         Dump_png(world.camera.film.colors, width, height, "output.png");
     } else {
         Initialize_Opengl_And_Glut(argc, argv);
@@ -133,8 +134,8 @@ int _main(int argc, char **argv) {
 }
 
 int main() {
-    int argc = 5;
-    char *argv[5] = {"", "-d", "10.txt", "render-10.png", "mask-all.png"};
+    int argc = 3;
+    char *argv[5] = {"", "-p", "test.txt", "render-21.png", "mask-all.png"};
     return _main(argc, argv);
 }
 

@@ -21,7 +21,7 @@ public:
     vec3 ambient_color;
     double ambient_intensity;
     Camera camera;
-    bool enable_shadows;
+    bool enable_shadows, antialias;
     int recursion_depth_limit;
 
     Render_World();

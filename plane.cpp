@@ -20,6 +20,8 @@ Intersection(const Ray &ray, std::vector<Hit> &hits) const {
         //std::cout<<ray.endpoint - ray.direction*newhit.t<<std::endl;
         newhit.ray_exiting = (ray_normal > 0);
         hits.push_back(newhit);
+
+
         return true;
     }
     return false;

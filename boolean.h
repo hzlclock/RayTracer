@@ -5,11 +5,13 @@
 
 class Boolean : public Object {
 public:
-    enum Type {
-        type_intersection, type_difference, type_union
-    } type;
+
     Object *A;
     Object *B;
+    enum Type {
+        type_intersection, type_difference, type_union
+    };
+    Type type;
 
     Boolean(Object *a, Object *b, Type t)
             : type(t), A(a), B(b) {}

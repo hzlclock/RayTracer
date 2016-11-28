@@ -6,6 +6,7 @@
 class Driver {
 public:
     Render_World &world;
+    bool AA = false;
     int state_j; // current rendering row
 
     Driver(Render_World &world_input)

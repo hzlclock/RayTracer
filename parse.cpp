@@ -10,6 +10,7 @@
 #include "reflective_shader.h"
 #include "render_world.h"
 #include "sphere.h"
+#include "SphereTextureShader.h"
 
 void Parse(Render_World &world, int &width, int &height, const char *test_file) {
     FILE *F = fopen(test_file, "r");
@@ -98,6 +99,11 @@ void Parse(Render_World &world, int &width, int &height, const char *test_file) 
             assert(c1 != colors.end());
             assert(c2 != colors.end());
             shaders[name] = new Phong_Shader(world, c0->second, c1->second, c2->second, f0);
+        } else if (item == "sp_texture_shader") {
+            ss >> name >> s0 >> s1;
+            assert(ss);
+            std::map<std::string, Shader *>::const_iterator c0 = shaders.find(s0);
+            shaders[name] = new SphereTextureShader(world, c0->second, s1);
         } else if (item == "reflective_shader") {
             ss >> name >> s0 >> f0;
             assert(ss);
@@ -131,6 +137,8 @@ void Parse(Render_World &world, int &width, int &height, const char *test_file) 
         } else if (item == "enable_shadows") {
             ss >> world.enable_shadows;
             assert(ss);
+        } else if (item == "antialias") {
+            ss >> world.antialias;
         } else if (item == "recursion_depth_limit") {
             ss >> world.recursion_depth_limit;
             assert(ss);
@@ -141,5 +149,8 @@ void Parse(Render_World &world, int &width, int &height, const char *test_file) 
     }
     if (!world.background_shader)
         world.background_shader = new Flat_Shader(world, vec3());
-    world.camera.film.Set_Resolution(width, height);
+    if (world.antialias)
+        world.camera.film.Set_Resolution_pourAA(width, height);
+    else
+        world.camera.film.Set_Resolution(width, height);
 }

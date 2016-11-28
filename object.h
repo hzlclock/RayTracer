@@ -18,6 +18,8 @@ class Object {
 public:
 
     Shader *material_shader;
+    double texture_scale;
+    vec3 texture_center;
 
     Object() : material_shader(0) {}
 

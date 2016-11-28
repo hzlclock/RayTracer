@@ -36,7 +36,7 @@ set(SOURCE_FILES
         shader.h
         sphere.cpp
         sphere.h
-        vec.h)
+        vec.h SphereTextureShader.cpp SphereTextureShader.h SubCylinder.cpp SubCylinder.h)
 
 add_executable(project2_cmake ${SOURCE_FILES})
 

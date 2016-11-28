@@ -55,7 +55,7 @@ void Render_World::Render_Pixel(const ivec2 &pixel_index) {
     ray = Ray(camera.position, look_direction);
 
     // then get the ray's color using Cast_Ray
-    vec3 color = Cast_Ray(ray, 1);
+    vec3 color = Cast_Ray(ray, recursion_depth_limit);
     camera.film.Set_Pixel(pixel_index, Pixel_Color(color));
 }
 
