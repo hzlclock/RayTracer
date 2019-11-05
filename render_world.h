@@ -18,7 +18,7 @@ public:
     Shader *background_shader;
     std::vector<Object *> objects;
     std::vector<Light *> lights;
-    vec3 ambient_color;
+    vec3 ambient_color; //环境光颜色
     double ambient_intensity;
     Camera camera;
     bool enable_shadows, antialias;

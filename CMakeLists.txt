@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.6)
 project(project2_cmake)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+find_package(PNG REQUIRED)
+include_directories(${PNG_INCLUDE_DIR})
+
 
 set(SOURCE_FILES
         boolean.cpp
@@ -36,7 +39,7 @@ set(SOURCE_FILES
         shader.h
         sphere.cpp
         sphere.h
-        vec.h SphereTextureShader.cpp SphereTextureShader.h SubCylinder.cpp SubCylinder.h)
+        vec.h SphereTextureShader.cpp SphereTextureShader.h SubCylinder.cpp SubCylinder.h TexturedBackgroundShader.cpp TexturedBackgroundShader.h)
 
 add_executable(project2_cmake ${SOURCE_FILES})
 
@@ -48,7 +51,8 @@ IF (APPLE)
     MARK_AS_ADVANCED(COCOA_LIBRARY
             GLUT_LIBRARY
             OpenGL_LIBRARY)
-    SET(EXTRA_LIBS ${COCOA_LIBRARY} ${GLUT_LIBRARY} ${OpenGL_LIBRARY} -lpng)
+    SET(EXTRA_LIBS ${COCOA_LIBRARY} ${GLUT_LIBRARY} ${OpenGL_LIBRARY})
 ENDIF (APPLE)
 
 target_link_libraries(project2_cmake ${EXTRA_LIBS})
+target_link_libraries(project2_cmake ${PNG_LIBRARY})

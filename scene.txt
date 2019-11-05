@@ -21,5 +21,5 @@ point_light -4 2 6 white 200
 point_light 0 -3 6 green 10
 point_light -2 3 -3 white 200
 enable_shadows 1
-recursion_depth_limit 1
+recursion_depth_limit 2
 camera 0 1 6 0 0 0 0 1 0 70

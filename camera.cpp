@@ -24,7 +24,7 @@ vec3 Camera::World_Position(const ivec2 &pixel_index) {
 
     // i would like to give a vector pointing towards that pixel
 
-    double x_offset = (pixel_index.x[0] - (float) film.pixel_grid.size.x[0] / 2.0 + 0.5) * x_scale;
+    double x_offset = (pixel_index.x[0] - (float) film.pixel_grid.size.x[0] / 2.0 + 0.5) * x_scale;//offset 是偏移的意思，这是相对于中心点的偏移量
     double y_offset = (pixel_index.x[1] - (float) film.pixel_grid.size.x[1] / 2.0 + 0.5) * y_scale;
 
     result = horizontal_vector * x_offset +

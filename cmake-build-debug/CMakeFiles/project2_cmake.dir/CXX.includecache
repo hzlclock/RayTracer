@@ -1,0 +1,336 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SphereTextureShader.cpp
+png.h
+-
+SphereTextureShader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SphereTextureShader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SphereTextureShader.h
+shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+string
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SubCylinder.cpp
+cylinder.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/cylinder.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+SubCylinder.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SubCylinder.h
+algorithm
+-
+cfloat
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SubCylinder.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/TexturedBackgroundShader.cpp
+TexturedBackgroundShader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/TexturedBackgroundShader.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+png.h
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/TexturedBackgroundShader.h
+shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+film.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.h
+string
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/boolean.cpp
+boolean.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/boolean.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+limits
+-
+algorithm
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/boolean.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/camera.cpp
+camera.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/camera.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/camera.h
+film.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/cylinder.cpp
+cylinder.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/cylinder.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+algorithm
+-
+cfloat
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/cylinder.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+SubCylinder.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SubCylinder.h
+boolean.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/boolean.h
+plane.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/plane.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/driver.cpp
+driver.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/driver.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/driver.h
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/dump_png.cpp
+png.h
+-
+cassert
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.cpp
+film.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.h
+grid.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/grid.h
+algorithm
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/flat_shader.cpp
+flat_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/flat_shader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/flat_shader.h
+shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/grid.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/hit.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/light.h
+math.h
+-
+vector
+-
+iostream
+-
+limits
+-
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/main.cpp
+windows.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+driver.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/driver.h
+film.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/film.h
+iostream
+-
+sstream
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+hit.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/hit.h
+vector
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/parse.cpp
+map
+-
+sstream
+-
+string
+-
+boolean.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/boolean.h
+cylinder.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/cylinder.h
+flat_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/flat_shader.h
+phong_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/phong_shader.h
+plane.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/plane.h
+point_light.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/point_light.h
+reflective_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/reflective_shader.h
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+sphere.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/sphere.h
+SphereTextureShader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/SphereTextureShader.h
+TexturedBackgroundShader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/TexturedBackgroundShader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/phong_shader.cpp
+light.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/light.h
+phong_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/phong_shader.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/phong_shader.h
+shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/plane.cpp
+plane.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/plane.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+cfloat
+-
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/plane.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/point_light.h
+math.h
+-
+vector
+-
+iostream
+-
+limits
+-
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+light.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/light.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/reflective_shader.cpp
+reflective_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/reflective_shader.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/reflective_shader.h
+shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.cpp
+render_world.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+flat_shader.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/flat_shader.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+light.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/light.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/render_world.h
+vector
+-
+camera.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/camera.h
+hit.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/hit.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/shader.h
+vec.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/sphere.cpp
+sphere.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/sphere.h
+ray.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/ray.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/sphere.h
+object.h
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/object.h
+
+/Users/test/Documents/Universidad/3 UCR/Computer Graphics/proj-02-files/vec.h
+cmath
+-
+iostream
+-
+cassert
+-
+
+/usr/local/include/GL/gl.h
+OpenGL/gl.h
+-
+
+/usr/local/include/GL/glut.h
+GLUT/glut.h
+-
+
+/usr/local/include/png.h
+pnglibconf.h
+/usr/local/include/pnglibconf.h
+pngconf.h
+/usr/local/include/pngconf.h
+
+/usr/local/include/pngconf.h
+limits.h
+-
+stddef.h
+-
+stdio.h
+-
+setjmp.h
+-
+time.h
+-
+
+/usr/local/include/pnglibconf.h
+

@@ -4,7 +4,6 @@
 
 #include <png.h>
 #include "SphereTextureShader.h"
-#include "phong_shader.h"
 
 typedef unsigned int Pixel;
 

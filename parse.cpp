@@ -11,6 +11,7 @@
 #include "render_world.h"
 #include "sphere.h"
 #include "SphereTextureShader.h"
+#include "TexturedBackgroundShader.h"
 
 void Parse(Render_World &world, int &width, int &height, const char *test_file) {
     FILE *F = fopen(test_file, "r");
@@ -104,6 +105,9 @@ void Parse(Render_World &world, int &width, int &height, const char *test_file) 
             assert(ss);
             std::map<std::string, Shader *>::const_iterator c0 = shaders.find(s0);
             shaders[name] = new SphereTextureShader(world, c0->second, s1);
+        } else if (item == "back_texture_shader") {
+            ss >> name >> s0 ;
+            shaders[name] = new TexturedBackgroundShader(world, s0);
         } else if (item == "reflective_shader") {
             ss >> name >> s0 >> f0;
             assert(ss);

@@ -69,7 +69,7 @@ void Dump_png(Pixel *data, int width, int height, const char *filename);
 
 void Read_png(Pixel *&data, int &width, int &height, const char *filename);
 
-int _main(int argc, char **argv) {
+int main(int argc, char **argv) {
     bool dump_png = false, compute_diff = false;
     char *solution_filename = 0;
     char *mask_filename = 0;
@@ -133,9 +133,9 @@ int _main(int argc, char **argv) {
     return 0;
 }
 
-int main() {
-    int argc = 3;
-    char *argv[5] = {"", "-p", "test.txt", "render-21.png", "mask-all.png"};
-    return _main(argc, argv);
-}
+// int main() {
+//     // int argc = 3;
+//     // char *argv[5] = {"", "-p", "scene.txt", "render-21.png", "mask-all.png"};
+//     return _main(argc, argv);
+// }
 
